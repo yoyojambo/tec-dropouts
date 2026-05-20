@@ -1,21 +1,23 @@
-# Configuración para Colaborar en Notebooks (Jupyter)
+# Tec Dropouts
 
-Para evitar conflictos en GitHub, usamos una herramienta llamada pre-commit. Esta
-herramienta limpia automáticamente los resultados de las celdas (gráficas, tablas,
-ejecuciones) en segundo plano justo antes de hacer un commit, manteniendo el historial de
-Git limpio sin alterar lo que ves en tu pantalla.
+## Configuración
 
-## Configuración Única (Solo se hace una vez)
+Para hacer más sencillo colaborar compartiendo por Git, usamos nbstripout, que filtra los
+archivos cuando entran a git para quitar los outputs de las celdas, y así simplifica los
+diffs, porque de otra forma se vuelve super gacho estar haciendo commits entre todos a las
+notebooks. https://github.com/kynan/nbstripout
 
-Abre tu terminal en la carpeta raíz del proyecto. Instala las herramientas necesarias
-ejecutando:
-
+Para configurar nbstripout, recomiendo usar:
 ```bash
-pip install pre-commit nbstripout
+pip install nbstripout
+
+nbstripout --install --python python3 --attributes .gitattributes
 ```
 
-Activa el hook en tu Git local con este comando:
+También recomiento aprovechar para correr:
 
 ```bash
-pre-commit install
+pip install -r notebooks/requirements.txt
 ```
+
+Si ya se tiene Jupyter instalado, ya está todo listo.
