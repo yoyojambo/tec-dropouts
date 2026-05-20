@@ -11,3 +11,12 @@ __pycache__/
 .venv/
 venv/
 env/
+
+# Ignore all data files locally
+data/raw/*
+data/processed/*
+!data/**/.gitkeep
+
+# Ignore model outputs
+models/*
+!models/.gitkeep
