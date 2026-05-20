@@ -1,0 +1,5 @@
+pandas
+python-calamine
+pyarrow
+fastparquet
+scikit-learn
