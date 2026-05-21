@@ -3,3 +3,4 @@ python-calamine
 pyarrow
 fastparquet
 scikit-learn
+openpyxl
