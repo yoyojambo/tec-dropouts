@@ -4,3 +4,10 @@ pyarrow
 fastparquet
 scikit-learn
 openpyxl
+arviz
+matplotlib
+numpy
+pandas
+pymc
+pytensor
+
